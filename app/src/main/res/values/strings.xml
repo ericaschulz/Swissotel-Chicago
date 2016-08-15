@@ -5,5 +5,25 @@
     <string name="book_button">BOOK NOW</string>
     <string name="swissotel">Swissotel Chicago</string>
     <string name="large_text">cjh,dxfhgvnkdbjfcfnjb cgn</string>
+    <string-array name="hoteldetails">
+        <item>HOTEL DETAILS</item>
+        <item>OVERVIEW</item>
+        <item>ACCOMMODATION</item>
+        <item>EXPLORE HOTEL</item>
+        <item>DINING</item>
+        <item>MEETINGS &amp; EVENTS</item>
+        <item>PROMOTIONS</item>
+    </string-array>
+    <string name="hotel_details">HOTEL DETAILS</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="accommodation">ACCOMMODATIONS</string>
+    <string name="explore_hotel">EXPLORE HOTEL</string>
+    <string name="dining">DINING</string>
+    <string name="meetings">MEETINGS &amp; EVENTS</string>
+    <string name="promos">PROMOTIONS</string>
+
+
+
+
 
 </resources>

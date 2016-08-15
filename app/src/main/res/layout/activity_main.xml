@@ -11,7 +11,7 @@
     android:background="@color/colorBg">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/swiss_lobby"
         android:src="@drawable/swissotel_lobby"
@@ -21,12 +21,12 @@
 
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/swiss_logo"
         android:src="@drawable/swissotel_logo"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toEndOf="@+id/book_button" />
 
     <Button
         android:layout_width="wrap_content"
@@ -35,9 +35,8 @@
         android:id="@+id/book_button"
         android:background="@drawable/button_border"
         android:textColor="#ffffff"
-        android:layout_below="@+id/swiss_logo"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="60dp" />
+        android:layout_alignTop="@+id/profile_button"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -46,9 +45,82 @@
         android:id="@+id/profile_button"
         android:background="@drawable/button_border"
         android:textColor="#ffffff"
-        android:layout_alignTop="@+id/book_button"
-        android:layout_alignEnd="@+id/swiss_logo"
-        android:layout_marginEnd="46dp" />
+        android:layout_below="@+id/swiss_logo"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accommodation"
+        android:id="@+id/acc_button"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/expl_button"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore_hotel"
+        android:id="@+id/expl_button"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/book_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meetings"
+        android:textColor="#ffffff"
+        android:id="@+id/meetings_btn"
+        android:background="@drawable/button_border"
+        android:layout_below="@+id/dining_btn"
+        android:layout_alignStart="@+id/acc_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/promos"
+        android:textColor="#ffffff"
+        android:id="@+id/promo_btn"
+        android:background="@drawable/button_border"
+        android:layout_below="@+id/dining_btn"
+        android:layout_alignEnd="@+id/expl_button"
+        android:layout_marginTop="52dp" />
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="New Button"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:id="@+id/button3"-->
+        <!--android:background="@drawable/button_border"-->
+        <!--android:layout_below="@+id/expl_button"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginBottom="5dp"/>-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dining"
+        android:textColor="#ffffff"
+        android:id="@+id/dining_btn"
+        android:gravity="center"
+        android:background="@drawable/button_border"
+        android:layout_below="@+id/acc_button"
+        android:layout_centerHorizontal="true" />
+
+
+    <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/button_border"-->
+        <!--android:id="@+id/spinner1"-->
+        <!--android:layout_below="@+id/book_button"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:entries="@array/hoteldetails">-->
+    <!--</Spinner>-->
 
 
 

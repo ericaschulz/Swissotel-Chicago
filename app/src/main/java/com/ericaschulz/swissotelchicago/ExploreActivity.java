@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,7 +23,7 @@ public class ExploreActivity extends AppCompatActivity {
 
     ImageView mLolla;
     ImageView mBean;
-    ImageView mPier;
+    ImageView imageView;
     String overview;
     JSONArray events;
     JSONObject weather;
@@ -35,10 +37,15 @@ public class ExploreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore);
 
+
+
         mExplore = (TextView) findViewById(R.id.explore);
-        mPier = (ImageView) findViewById(R.id.chicago_img);
-        mPier.setImageResource(R.drawable.thepier);
+        imageView = (ImageView) findViewById(R.id.chicago_img);
         mHome = (Button) findViewById(R.id.home_btn);
+
+        Picasso.with(this)
+               .load(R.drawable.thepier)
+                .into(imageView);
 
 
         SwissApiTask httpTask = new SwissApiTask();

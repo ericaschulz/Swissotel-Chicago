@@ -30,25 +30,25 @@ public class JsonParser {
         return null;
     }
 
-    public JSONObject getPhotos() {
-
-        try {
-            OkHttpClient client = new OkHttpClient();
-            String Gallery_url = "http://apistage.swissotel.com/hotels/chicago/media/photos/";
-            Request request = new Request.Builder()
-                    .url(Gallery_url).build();
-
-            response = client.newCall(request).execute();
-            return new JSONObject((response.body().string()));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+//    public JSONObject getPhotos() {
+//
+//        try {
+//            OkHttpClient client = new OkHttpClient();
+//            String Gallery_url = "http://apistage.swissotel.com/hotels/chicago/media/photos/";
+//            Request request = new Request.Builder()
+//                    .url(Gallery_url).build();
+//
+//            response = client.newCall(request).execute();
+//            return new JSONObject((response.body().string()));
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
 
 
 

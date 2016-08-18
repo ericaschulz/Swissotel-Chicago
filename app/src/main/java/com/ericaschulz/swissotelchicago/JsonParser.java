@@ -13,12 +13,12 @@ import okhttp3.Response;
 public class JsonParser {
     private static Response response;
 
-    public static JSONObject getSwissotelChicagoDetails(String ChicagoDetails) {
+    public JSONObject getDetails() {
         try {
             OkHttpClient client = new OkHttpClient();
-            String ChicagoDetails_url = "http://apistage.swissotel.com/hotels/chicago/";
+            String Details_url = "http://apistage.swissotel.com/hotels/chicago/explore-hotel/local-guide/";
             Request request = new Request.Builder()
-                    .url(ChicagoDetails_url).build();
+                    .url(Details_url).build();
 
             response = client.newCall(request).execute();
             return new JSONObject(response.body().string());
@@ -29,4 +29,28 @@ public class JsonParser {
         }
         return null;
     }
+
+    public JSONObject getPhotos() {
+
+        try {
+            OkHttpClient client = new OkHttpClient();
+            String Gallery_url = "http://apistage.swissotel.com/hotels/chicago/media/photos/";
+            Request request = new Request.Builder()
+                    .url(Gallery_url).build();
+
+            response = client.newCall(request).execute();
+            return new JSONObject((response.body().string()));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+
 }

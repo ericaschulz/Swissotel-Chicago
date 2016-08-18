@@ -5,6 +5,7 @@
     <string name="book_button">BOOK NOW</string>
     <string name="swissotel">Swissotel Chicago</string>
     <string name="large_text">cjh,dxfhgvnkdbjfcfnjb cgn</string>
+    <string name="home_button">HOME</string>
     <string-array name="hoteldetails">
         <item>HOTEL DETAILS</item>
         <item>OVERVIEW</item>
@@ -17,13 +18,16 @@
     <string name="hotel_details">HOTEL DETAILS</string>
     <string name="overview">OVERVIEW</string>
     <string name="accommodation">ACCOMMODATIONS</string>
-    <string name="explore_hotel">EXPLORE HOTEL</string>
+    <string name="explore_chicago">EXPLORE CHICAGO</string>
     <string name="dining">DINING</string>
     <string name="meetings">MEETINGS &amp; EVENTS</string>
     <string name="promos">PROMOTIONS</string>
+    <string name="photos_api_link">http://apistage.swissotel.com/hotels/chicago/media/photos/</string>
+    <string name="local_guide_api_link">http://apistage.swissotel.com/hotels/chicago/explore-hotel/local-guide/</string>
 
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_photo">PhotoActivity</string>
 
 
 </resources>

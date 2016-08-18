@@ -17,14 +17,6 @@ public class MainActivity extends AppCompatActivity {
     Button mPromo;
     Button mMeetings;
 
-    View.OnClickListener listener;
-
-//    String meetings, dining, explore, accomodation, promotions, book, profile, localGuide, details;
-
-//    String[]Details={"Hotel Details", "Accommodation","Explore Hotel", "Dining", "Meetings & Events","Promotions", "Overview"};
-//
-//    Spinner DetailsSpinner;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +30,28 @@ public class MainActivity extends AppCompatActivity {
         mDining = (Button) findViewById(R.id.dining_btn);
         mPromo = (Button) findViewById(R.id.promo_btn);
         mMeetings = (Button) findViewById(R.id.meetings_btn);
+
+
+
+
+
+
+
+        mExpl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mExplIntent = new Intent(MainActivity.this, ExploreActivity.class);
+
+                startActivity(mExplIntent);
+
+
+
+            }
+        });
+
+
+
+
 
 
 
@@ -60,105 +74,56 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        mPromo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mPromoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/promotions/"));
-
-                startActivity(mPromoIntent);
-
-            }
-        });
-
+//
+//        mPromo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent mPromoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/promotions/"));
+//
+//                startActivity(mPromoIntent);
+//
+//            }
+//        });
+//
         mAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mAccIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/accommodation/"));
+                Intent mPhotoIntent = new Intent(MainActivity.this, PhotoActivity.class);
 
-                startActivity(mAccIntent);
+                startActivity(mPhotoIntent);
 
-            }
-        });
 
-        mDining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mDinIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/dining/"));
-
-                startActivity(mDinIntent);
 
             }
         });
 
+//
+//        mDining.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent mDinIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/dining/"));
+//
+//                startActivity(mDinIntent);
+//
+//            }
+//        });
+//
         mMeetings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mMeetIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/meeting-events/ballrooms/"));
+                Intent mMeetIntent = new Intent(MainActivity.this, PhotoActivity.class);
 
                 startActivity(mMeetIntent);
 
             }
         });
 
-        mExpl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mExplIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/explore-hotel/"));
-
-                startActivity(mExplIntent);
-
-            }
-        });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        DetailsSpinner = (Spinner) findViewById(R.id.spinner1);
-//        DetailsSpinner.setAdapter(new SpinnerAdapter(MainActivity.this, R.layout.spinner,Details));
 
 
     }
-//    private class SwissApiTask extends AsyncTask<Void, Void, Void> {
-//        @TargetApi(Build.VERSION_CODES.N)
-//        @Override
-//        protected Void doInBackground(Void... voids) {
-//            JSONObject swissJson = JsonParser.getSwissotelChicagoDetails(explore);
-//
-//            if (swissJson != null && swissJson.length() > 0) {
-//
-//                try {
-//                    explore = swissJson.getJSONObject("details").getString("carouselLinks");
-//                    JSONArray carouselArray = swissJson.getJSONArray("carouselLinks");
-//
-//                    for (int i = 0; i < carouselArray.length(); i++) {
-//
-//                        JSONObject innerObject = carouselArray.getJSONObject(i);
-//                        localGuide = innerObject.getString("local_guide");
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//            return null;
-//        }
-//        @Override
-//        protected void onPostExecute (Void empty){
-//
-//            explore.setText(explore);
-//            localGuide.setText(localGuide);
-//        }
-//    }
+
+
 
 }

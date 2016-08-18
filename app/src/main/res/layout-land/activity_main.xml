@@ -27,7 +27,7 @@
         android:id="@+id/swiss_logo"
         android:src="@drawable/swissotel_logo"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/book_button" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -67,8 +67,9 @@
         android:textColor="#ffffff"
         android:id="@+id/meetings_btn"
         android:background="@drawable/button_border"
-        android:layout_below="@+id/dining_btn"
-        android:layout_alignStart="@+id/acc_button" />
+        android:layout_alignStart="@+id/acc_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/dining_btn" />
 
     <Button
         android:layout_width="wrap_content"
@@ -86,8 +87,8 @@
         android:id="@+id/expl_button"
         android:background="@drawable/button_border"
         android:textColor="#ffffff"
-        android:layout_below="@+id/promo_btn"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/meetings_btn"
+        android:layout_alignEnd="@+id/profile_button" />
 
 
     <Button
@@ -98,8 +99,8 @@
         android:id="@+id/dining_btn"
         android:gravity="center"
         android:background="@drawable/button_border"
-        android:layout_below="@+id/acc_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
 
 
 

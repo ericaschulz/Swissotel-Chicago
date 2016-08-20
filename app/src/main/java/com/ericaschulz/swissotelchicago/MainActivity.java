@@ -1,6 +1,7 @@
 package com.ericaschulz.swissotelchicago;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     Button mMeetings;
 
 
-//    Button mBook;
-//    Button mProfile;
+    Button mBook;
+    Button mProfile;
 //    Button mDining;
 //    Button mPromo;
 
@@ -31,12 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        mBook = (Button) findViewById(R.id.book_button);
-//        mProfile = (Button) findViewById(R.id.profile_button);
+        mBook = (Button) findViewById(R.id.book_button);
+        mProfile = (Button) findViewById(R.id.profile_button);
 //        mDining = (Button) findViewById(R.id.dining_btn);
 //        mPromo = (Button) findViewById(R.id.promo_btn);
-
-
 
 
 
@@ -83,25 +82,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        mProfile.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent mProfIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.swissotel.com/circle/log-in/"));
-//
-//                startActivity(mProfIntent);
-//
-//            }
-//        });
+        mProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mProfIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.swissotel.com/circle/log-in/"));
 
-//        mBook.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent mBookIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/"));
-//
-//                startActivity(mBookIntent);
-//
-//            }
-//        });
+                startActivity(mProfIntent);
+
+            }
+        });
+
+        mBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mBookIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swissotel.com/hotels/chicago/"));
+
+                startActivity(mBookIntent);
+
+            }
+        });
+
+
 //
 //        mPromo.setOnClickListener(new View.OnClickListener() {
 //            @Override
